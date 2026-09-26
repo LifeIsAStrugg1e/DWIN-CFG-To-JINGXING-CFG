@@ -1,0 +1,25 @@
+# Python runtime files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Excel temporary lock files
+~$*.xlsx
+~$*.xls
+
+# Local generated output and logs
+config.TXT
+*.log
+*.ndjson
+
+# Local editor and OS files
+.vscode/
+.idea/
+*.tmp
+*.swp
+Thumbs.db
+Desktop.ini
+
+# Local backup copies are kept outside version control
+profiles/backups/

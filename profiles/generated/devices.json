@@ -1,0 +1,390 @@
+{
+  "devices": [
+    {
+      "default_system": "INSTRUCTION",
+      "display_name": "T5UIC2",
+      "fields": [
+        {
+          "add": 0,
+          "byte_order": "big",
+          "constant": 7833600,
+          "field": "baudrate",
+          "offset": 9,
+          "priority": 10,
+          "scale": 1,
+          "size": 2,
+          "type": "divisor"
+        },
+        {
+          "add": 0,
+          "bit": 6,
+          "byte_order": "big",
+          "false_value": 0,
+          "field": "direction",
+          "offset": 8,
+          "priority": 20,
+          "scale": 1,
+          "size": 1,
+          "true_value": 90,
+          "type": "bit"
+        },
+        {
+          "add": 0,
+          "bit": 6,
+          "byte_order": "big",
+          "field": "direction",
+          "offset": 33,
+          "priority": 30,
+          "scale": 1,
+          "size": 1,
+          "skip_false": true,
+          "true_value": 180,
+          "type": "bit"
+        },
+        {
+          "add": 0,
+          "bit": 4,
+          "byte_order": "big",
+          "field": "tp_buzzer",
+          "invert": true,
+          "offset": 33,
+          "priority": 40,
+          "scale": 1,
+          "size": 1,
+          "type": "bit"
+        }
+      ],
+      "header_hex": "54354332",
+      "minimum_size": 34,
+      "model": "T5UIC2"
+    },
+    {
+      "default_system": "JGUSII",
+      "display_name": "T5UID3",
+      "fields": [
+        {
+          "add": 0,
+          "byte_order": "big",
+          "constant": 7833600,
+          "field": "baudrate",
+          "offset": 9,
+          "priority": 10,
+          "scale": 1,
+          "size": 2,
+          "type": "divisor"
+        },
+        {
+          "add": 0,
+          "bit": 7,
+          "byte_order": "big",
+          "field": "tp_auto_upload",
+          "offset": 8,
+          "priority": 20,
+          "scale": 1,
+          "size": 1,
+          "type": "bit"
+        },
+        {
+          "add": 0,
+          "bit": 6,
+          "byte_order": "big",
+          "false_value": 64,
+          "field": "var_per_page",
+          "offset": 8,
+          "priority": 20,
+          "scale": 1,
+          "size": 1,
+          "true_value": 128,
+          "type": "bit"
+        },
+        {
+          "add": 0,
+          "bit": 5,
+          "byte_order": "big",
+          "field": "load_22",
+          "offset": 8,
+          "priority": 20,
+          "scale": 1,
+          "size": 1,
+          "type": "bit"
+        },
+        {
+          "add": 0,
+          "bit": 3,
+          "byte_order": "big",
+          "field": "tp_buzzer",
+          "offset": 8,
+          "priority": 20,
+          "scale": 1,
+          "size": 1,
+          "type": "bit"
+        },
+        {
+          "add": 0,
+          "bit": 2,
+          "byte_order": "big",
+          "field": "backlight_standby",
+          "offset": 8,
+          "priority": 20,
+          "scale": 1,
+          "size": 1,
+          "type": "bit"
+        },
+        {
+          "add": 0,
+          "bit": 0,
+          "bit_width": 2,
+          "byte_order": "big",
+          "field": "direction",
+          "offset": 8,
+          "priority": 20,
+          "scale": 90,
+          "size": 1,
+          "type": "bitfield"
+        }
+      ],
+      "header_hex": "54354433",
+      "minimum_size": 16,
+      "model": "T5UID3"
+    },
+    {
+      "default_system": "JGUSII",
+      "display_name": "T5L DGUSII",
+      "fields": [
+        {
+          "add": 0,
+          "bit": 7,
+          "byte_order": "big",
+          "field": "crc_enable",
+          "offset": 5,
+          "priority": 20,
+          "scale": 1,
+          "size": 1,
+          "type": "bit"
+        },
+        {
+          "add": 0,
+          "bit": 6,
+          "byte_order": "big",
+          "field": "buzzer_enable",
+          "offset": 5,
+          "priority": 20,
+          "scale": 1,
+          "size": 1,
+          "type": "bit"
+        },
+        {
+          "add": 0,
+          "bit": 5,
+          "byte_order": "big",
+          "field": "load_22",
+          "offset": 5,
+          "priority": 20,
+          "scale": 1,
+          "size": 1,
+          "type": "bit"
+        },
+        {
+          "add": 0,
+          "bit": 4,
+          "byte_order": "big",
+          "field": "tp_auto_upload",
+          "offset": 5,
+          "priority": 20,
+          "scale": 1,
+          "size": 1,
+          "type": "bit"
+        },
+        {
+          "add": 0,
+          "bit": 3,
+          "byte_order": "big",
+          "field": "tp_buzzer",
+          "offset": 5,
+          "priority": 20,
+          "scale": 1,
+          "size": 1,
+          "type": "bit"
+        },
+        {
+          "add": 0,
+          "bit": 2,
+          "byte_order": "big",
+          "field": "backlight_standby",
+          "offset": 5,
+          "priority": 20,
+          "scale": 1,
+          "size": 1,
+          "type": "bit"
+        },
+        {
+          "add": 0,
+          "bit": 0,
+          "bit_width": 2,
+          "byte_order": "big",
+          "field": "direction",
+          "offset": 5,
+          "priority": 20,
+          "scale": 90,
+          "size": 1,
+          "type": "bitfield"
+        },
+        {
+          "add": 0,
+          "byte_order": "big",
+          "field": "bg_image_id",
+          "null_if_zero": true,
+          "offset": 8,
+          "priority": 10,
+          "scale": 1,
+          "size": 1,
+          "type": "uint"
+        },
+        {
+          "add": 0,
+          "byte_order": "big",
+          "constant": 3225600,
+          "field": "baudrate",
+          "offset": 10,
+          "priority": 10,
+          "scale": 1,
+          "size": 2,
+          "skip_values": [
+            0
+          ],
+          "type": "divisor"
+        },
+        {
+          "add": 0,
+          "byte_order": "big",
+          "field": "brightness_on",
+          "offset": 12,
+          "priority": 10,
+          "scale": 1,
+          "size": 1,
+          "type": "uint"
+        },
+        {
+          "add": 0,
+          "byte_order": "big",
+          "field": "brightness_off",
+          "offset": 13,
+          "priority": 10,
+          "scale": 1,
+          "size": 1,
+          "type": "uint"
+        },
+        {
+          "add": 0,
+          "byte_order": "big",
+          "divide": 100,
+          "field": "backlight_time",
+          "minimum_value": 1,
+          "offset": 14,
+          "priority": 10,
+          "scale": 1,
+          "size": 2,
+          "skip_values": [
+            0,
+            65535
+          ],
+          "type": "uint"
+        }
+      ],
+      "header_hex": "54354C4331",
+      "minimum_size": 16,
+      "model": "T5L_DGUSII"
+    },
+    {
+      "default_system": "INSTRUCTION",
+      "display_name": "T5L TA",
+      "fields": [
+        {
+          "add": 0,
+          "bit": 7,
+          "byte_order": "big",
+          "field": "crc_enable",
+          "offset": 5,
+          "priority": 20,
+          "scale": 1,
+          "size": 1,
+          "type": "bit"
+        },
+        {
+          "add": 0,
+          "bit": 2,
+          "byte_order": "big",
+          "field": "tp_buzzer",
+          "invert": true,
+          "offset": 5,
+          "priority": 20,
+          "scale": 1,
+          "size": 1,
+          "type": "bit"
+        },
+        {
+          "add": 0,
+          "bit": 0,
+          "bit_width": 2,
+          "byte_order": "big",
+          "field": "direction",
+          "offset": 5,
+          "priority": 20,
+          "scale": 90,
+          "size": 1,
+          "type": "bitfield"
+        },
+        {
+          "add": 0,
+          "byte_order": "big",
+          "field": "audio_id",
+          "null_if_zero": true,
+          "offset": 7,
+          "priority": 10,
+          "scale": 1,
+          "size": 1,
+          "type": "uint"
+        },
+        {
+          "add": 0,
+          "byte_order": "big",
+          "field": "bg_image_id",
+          "null_if_zero": true,
+          "offset": 8,
+          "priority": 10,
+          "scale": 1,
+          "size": 1,
+          "type": "uint"
+        },
+        {
+          "add": 0,
+          "byte_order": "big",
+          "constant": 3225600,
+          "field": "baudrate",
+          "offset": 10,
+          "priority": 10,
+          "scale": 1,
+          "size": 2,
+          "skip_values": [
+            0
+          ],
+          "type": "divisor"
+        },
+        {
+          "add": 0,
+          "byte_order": "big",
+          "field": "brightness_on",
+          "offset": 12,
+          "priority": 10,
+          "scale": 1,
+          "size": 1,
+          "type": "uint"
+        }
+      ],
+      "header_hex": "54354C4331",
+      "minimum_size": 16,
+      "model": "T5L_TA"
+    }
+  ],
+  "schema_version": 1
+}

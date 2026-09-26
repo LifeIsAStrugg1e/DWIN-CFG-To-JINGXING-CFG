@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CFG Studio</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">C</div>
+      <div>
+        <div class="brand-title">CFG Studio</div>
+        <div class="brand-subtitle">设备配置转换与规则追踪</div>
+      </div>
+      <div class="topbar-status"><span class="status-dot"></span> 本地运行</div>
+    </header>
+
+    <section class="workspace" aria-label="CFG 转换工作台">
+      <aside class="control-column">
+        <div class="section-heading">
+          <span class="eyebrow">CONVERT</span>
+          <h1>转换 CFG</h1>
+          <p>上传配置文件，查看每一个源字段如何写入目标寄存器。</p>
+        </div>
+
+        <label class="drop-zone" id="dropZone" for="fileInput">
+          <input id="fileInput" type="file" accept=".cfg,.CFG,.bin,application/octet-stream">
+          <span class="upload-icon" aria-hidden="true">↑</span>
+          <strong id="fileName">选择 CFG 文件</strong>
+          <span id="fileMeta">拖放文件到这里，或点击浏览</span>
+        </label>
+
+        <div class="form-stack">
+          <label class="field-label" for="sourceModel">源设备型号</label>
+          <select class="select-control" id="sourceModel">
+            <option value="">自动检测</option>
+            <option value="T5L_DGUSII">T5L DGUSII</option>
+            <option value="T5L_TA">T5L TA</option>
+          </select>
+          <div class="field-hint">T5LC1 文件头无法区分两种 T5L，请手动选择。</div>
+
+          <label class="field-label" for="targetSystem">目标系统</label>
+          <select class="select-control" id="targetSystem">
+            <option value="AUTO">自动选择</option>
+            <option value="JGUS">JGUS</option>
+            <option value="JGUSII">JGUSII</option>
+            <option value="INSTRUCTION">INSTRUCTION</option>
+          </select>
+        </div>
+
+        <button class="primary-button" id="convertButton" type="button" disabled>
+          <span>开始转换</span><span aria-hidden="true">→</span>
+        </button>
+        <div class="error-box" id="errorBox" role="alert" hidden></div>
+        <div class="support-note"><span class="status-dot"></span> 规则来自当前 profiles JSON</div>
+      </aside>
+
+      <section class="result-column" id="resultColumn" aria-live="polite">
+        <div class="empty-state" id="emptyState">
+          <div class="empty-icon" aria-hidden="true">⌁</div>
+          <h2>等待一个配置文件</h2>
+          <p>转换后，这里会显示源字段、位映射和生成的寄存器配置。</p>
+        </div>
+
+        <div id="resultContent" hidden>
+          <div class="result-header">
+            <div>
+              <span class="eyebrow">RESULT</span>
+              <h2 id="resultTitle">转换结果</h2>
+              <p id="resultSummary"></p>
+            </div>
+            <button class="secondary-button" id="downloadButton" type="button">下载配置文本 <span aria-hidden="true">↓</span></button>
+          </div>
+
+          <div class="metric-row" id="metricRow"></div>
+
+          <div class="view-tabs" role="tablist" aria-label="结果视图">
+            <button class="tab-button is-active" data-tab="mapping" role="tab" aria-selected="true">对应关系</button>
+            <button class="tab-button" data-tab="registers" role="tab" aria-selected="false">目标寄存器</button>
+            <button class="tab-button" data-tab="bytes" role="tab" aria-selected="false">原始字节</button>
+          </div>
+
+          <div class="tab-panel" id="mappingPanel"></div>
+          <div class="tab-panel" id="registersPanel" hidden></div>
+          <div class="tab-panel" id="bytesPanel" hidden></div>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

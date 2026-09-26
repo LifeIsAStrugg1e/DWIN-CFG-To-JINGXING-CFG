@@ -1,0 +1,377 @@
+{
+  "schema_version": 1,
+  "targets": [
+    {
+      "bit_mappings": [
+        {
+          "compare_value": 180,
+          "operation": "equals",
+          "priority": 10,
+          "source_field": "direction",
+          "target_bit": 5,
+          "target_register": "R2"
+        },
+        {
+          "operation": "truthy",
+          "priority": 10,
+          "source_field": "tp_buzzer",
+          "target_bit": 3,
+          "target_register": "R2"
+        },
+        {
+          "compare_value": 90,
+          "operation": "equals",
+          "priority": 10,
+          "source_field": "direction",
+          "target_bit": 2,
+          "target_register": "R2"
+        },
+        {
+          "operation": "truthy",
+          "priority": 10,
+          "source_field": "tp_auto_upload",
+          "target_bit": 0,
+          "target_register": "R2"
+        },
+        {
+          "compare_value": 180,
+          "operation": "equals",
+          "priority": 10,
+          "source_field": "direction",
+          "target_bit": 5,
+          "target_register": "R3"
+        },
+        {
+          "operation": "falsy",
+          "priority": 10,
+          "source_field": "crc_enable",
+          "target_bit": 1,
+          "target_register": "R3"
+        }
+      ],
+      "defaults": {
+        "R12": 1,
+        "R2": 0,
+        "R3": 0,
+        "RB": 0
+      },
+      "system": "INSTRUCTION",
+      "value_mappings": [
+        {
+          "output_policy": "always",
+          "parameter": "JGXING_BAUD",
+          "source_field": "baudrate",
+          "target_register": "R1",
+          "transform": "enum"
+        },
+        {
+          "output_policy": "always",
+          "parameter": null,
+          "source_field": "brightness_on",
+          "target_register": "R6",
+          "transform": "percent_to_63"
+        },
+        {
+          "output_policy": "always",
+          "parameter": null,
+          "source_field": "brightness_off",
+          "target_register": "R7",
+          "transform": "percent_to_63"
+        },
+        {
+          "output_policy": "always",
+          "parameter": null,
+          "source_field": "backlight_time",
+          "target_register": "R8",
+          "transform": "seconds_x2"
+        },
+        {
+          "output_policy": "if_present",
+          "parameter": null,
+          "source_field": "bg_image_id",
+          "target_register": "R10",
+          "transform": "direct"
+        },
+        {
+          "output_policy": "if_present",
+          "parameter": null,
+          "source_field": "audio_id",
+          "target_register": "R11",
+          "transform": "direct"
+        },
+        {
+          "output_policy": "always",
+          "parameter": null,
+          "source_field": "tp_type",
+          "target_register": "RD",
+          "transform": "touch_type"
+        },
+        {
+          "output_policy": "always",
+          "parameter": null,
+          "source_field": "debug_enable",
+          "target_register": "RE",
+          "transform": "debug_switch"
+        }
+      ]
+    },
+    {
+      "bit_mappings": [
+        {
+          "compare_value": 90,
+          "operation": "equals",
+          "priority": 10,
+          "source_field": "direction",
+          "target_bit": 7,
+          "target_register": "R2"
+        },
+        {
+          "compare_value": 180,
+          "operation": "equals",
+          "priority": 10,
+          "source_field": "direction",
+          "target_bit": 6,
+          "target_register": "R2"
+        },
+        {
+          "operation": "truthy",
+          "priority": 10,
+          "source_field": "backlight_standby",
+          "target_bit": 5,
+          "target_register": "R2"
+        },
+        {
+          "operation": "truthy",
+          "priority": 10,
+          "source_field": "crc_enable",
+          "target_bit": 4,
+          "target_register": "R2"
+        },
+        {
+          "operation": "truthy",
+          "priority": 10,
+          "source_field": "tp_auto_upload",
+          "target_bit": 3,
+          "target_register": "R2"
+        },
+        {
+          "operation": "truthy",
+          "priority": 10,
+          "source_field": "load_22",
+          "target_bit": 2,
+          "target_register": "R2"
+        },
+        {
+          "operation": "truthy",
+          "priority": 10,
+          "source_field": "tp_buzzer",
+          "target_bit": 5,
+          "target_register": "RC"
+        },
+        {
+          "compare_value": 128,
+          "operation": "equals",
+          "priority": 10,
+          "source_field": "var_per_page",
+          "target_bit": 4,
+          "target_register": "RC"
+        }
+      ],
+      "defaults": {
+        "R12": 2,
+        "R2": 0,
+        "R3": 90,
+        "RA": 165,
+        "RC": 0
+      },
+      "system": "JGUS",
+      "value_mappings": [
+        {
+          "output_policy": "always",
+          "parameter": "JGXING_BAUD",
+          "source_field": "baudrate",
+          "target_register": "R1",
+          "transform": "enum"
+        },
+        {
+          "output_policy": "always",
+          "parameter": null,
+          "source_field": "brightness_on",
+          "target_register": "R6",
+          "transform": "percent_to_63"
+        },
+        {
+          "output_policy": "always",
+          "parameter": null,
+          "source_field": "brightness_off",
+          "target_register": "R7",
+          "transform": "percent_to_63"
+        },
+        {
+          "output_policy": "always",
+          "parameter": null,
+          "source_field": "backlight_time",
+          "target_register": "R8",
+          "transform": "seconds"
+        },
+        {
+          "output_policy": "if_present",
+          "parameter": null,
+          "source_field": "bg_image_id",
+          "target_register": "R10",
+          "transform": "direct"
+        },
+        {
+          "output_policy": "if_present",
+          "parameter": null,
+          "source_field": "audio_id",
+          "target_register": "R11",
+          "transform": "direct"
+        },
+        {
+          "output_policy": "always",
+          "parameter": null,
+          "source_field": "tp_type",
+          "target_register": "RD",
+          "transform": "touch_type"
+        },
+        {
+          "output_policy": "always",
+          "parameter": null,
+          "source_field": "debug_enable",
+          "target_register": "RE",
+          "transform": "debug_switch"
+        }
+      ]
+    },
+    {
+      "bit_mappings": [
+        {
+          "compare_value": 90,
+          "operation": "equals",
+          "priority": 10,
+          "source_field": "direction",
+          "target_bit": 7,
+          "target_register": "R2"
+        },
+        {
+          "compare_value": 180,
+          "operation": "equals",
+          "priority": 10,
+          "source_field": "direction",
+          "target_bit": 6,
+          "target_register": "R2"
+        },
+        {
+          "operation": "truthy",
+          "priority": 10,
+          "source_field": "backlight_standby",
+          "target_bit": 5,
+          "target_register": "R2"
+        },
+        {
+          "operation": "truthy",
+          "priority": 10,
+          "source_field": "crc_enable",
+          "target_bit": 4,
+          "target_register": "R2"
+        },
+        {
+          "operation": "truthy",
+          "priority": 10,
+          "source_field": "tp_auto_upload",
+          "target_bit": 3,
+          "target_register": "R2"
+        },
+        {
+          "operation": "truthy",
+          "priority": 10,
+          "source_field": "load_22",
+          "target_bit": 2,
+          "target_register": "R2"
+        },
+        {
+          "operation": "truthy",
+          "priority": 10,
+          "source_field": "tp_buzzer",
+          "target_bit": 5,
+          "target_register": "RC"
+        },
+        {
+          "compare_value": 128,
+          "operation": "equals",
+          "priority": 10,
+          "source_field": "var_per_page",
+          "target_bit": 4,
+          "target_register": "RC"
+        }
+      ],
+      "defaults": {
+        "R12": 3,
+        "R2": 0,
+        "R3": 90,
+        "RA": 165,
+        "RC": 0
+      },
+      "system": "JGUSII",
+      "value_mappings": [
+        {
+          "output_policy": "always",
+          "parameter": "JGXING_BAUD",
+          "source_field": "baudrate",
+          "target_register": "R1",
+          "transform": "enum"
+        },
+        {
+          "output_policy": "always",
+          "parameter": null,
+          "source_field": "brightness_on",
+          "target_register": "R6",
+          "transform": "percent_to_63"
+        },
+        {
+          "output_policy": "always",
+          "parameter": null,
+          "source_field": "brightness_off",
+          "target_register": "R7",
+          "transform": "percent_to_63"
+        },
+        {
+          "output_policy": "always",
+          "parameter": null,
+          "source_field": "backlight_time",
+          "target_register": "R8",
+          "transform": "seconds"
+        },
+        {
+          "output_policy": "if_present",
+          "parameter": null,
+          "source_field": "bg_image_id",
+          "target_register": "R10",
+          "transform": "direct"
+        },
+        {
+          "output_policy": "if_present",
+          "parameter": null,
+          "source_field": "audio_id",
+          "target_register": "R11",
+          "transform": "direct"
+        },
+        {
+          "output_policy": "always",
+          "parameter": null,
+          "source_field": "tp_type",
+          "target_register": "RD",
+          "transform": "touch_type"
+        },
+        {
+          "output_policy": "always",
+          "parameter": null,
+          "source_field": "debug_enable",
+          "target_register": "RE",
+          "transform": "debug_switch"
+        }
+      ]
+    }
+  ]
+}

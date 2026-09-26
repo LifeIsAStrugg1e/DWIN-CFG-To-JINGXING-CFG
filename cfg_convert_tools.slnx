@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="convert_tools/convert_tools.vcxproj" Id="572bde3c-84c9-479e-b495-ddbf6a99729a" />
+</Solution>

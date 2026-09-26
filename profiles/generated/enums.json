@@ -1,0 +1,83 @@
+{
+  "enums": {
+    "JGXING_BAUD": [
+      {
+        "source": 1200,
+        "target": 0
+      },
+      {
+        "source": 2400,
+        "target": 1
+      },
+      {
+        "source": 4800,
+        "target": 2
+      },
+      {
+        "source": 9600,
+        "target": 3
+      },
+      {
+        "source": 19200,
+        "target": 4
+      },
+      {
+        "source": 38400,
+        "target": 5
+      },
+      {
+        "source": 57600,
+        "target": 6
+      },
+      {
+        "source": 115200,
+        "target": 7
+      },
+      {
+        "source": 230400,
+        "target": 8
+      },
+      {
+        "source": 250000,
+        "target": 9
+      },
+      {
+        "source": 460800,
+        "target": 10
+      },
+      {
+        "source": 500000,
+        "target": 11
+      },
+      {
+        "source": 921600,
+        "target": 12
+      },
+      {
+        "source": 1000000,
+        "target": 13
+      },
+      {
+        "source": 1500000,
+        "target": 14
+      },
+      {
+        "source": 2000000,
+        "target": 15
+      },
+      {
+        "source": 3000000,
+        "target": 16
+      },
+      {
+        "source": 4000000,
+        "target": 17
+      },
+      {
+        "source": 4500000,
+        "target": 18
+      }
+    ]
+  },
+  "schema_version": 1
+}
